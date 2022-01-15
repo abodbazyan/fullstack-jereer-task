@@ -4,7 +4,7 @@ import { GET_ERRORS, ADD_POST, GET_POSTS } from "./types";
 
 export const addPost = (postData) => (dispatch) => {
   axios
-    .post("http://localhost:5000/api/posts", postData)
+    .post("https://fathomless-spire-96269.herokuapp.com/api/posts", postData)
     .then((res) =>
       dispatch({
         type: ADD_POST,
@@ -22,7 +22,7 @@ export const addPost = (postData) => (dispatch) => {
 
 export const getPosts = () => (dispatch) => {
   axios
-    .get("http://localhost:5000/api/posts")
+    .get("https://fathomless-spire-96269.herokuapp.com/api/posts")
     .then((res) =>
       dispatch({
         type: GET_POSTS,
