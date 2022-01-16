@@ -6,10 +6,7 @@ import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 
 export const registerUser = (userData, history) => (dispatch) => {
   axios
-    .post(
-      "https://fathomless-spire-96269.herokuapp.com/api/users/register",
-      userData
-    )
+    .post("http://localhost:5000/api/users/register", userData)
     .then((res) => history.push("/login"))
     .catch((err) =>
       dispatch({
@@ -21,10 +18,7 @@ export const registerUser = (userData, history) => (dispatch) => {
 
 export const loginUser = (userData, history) => (dispatch) => {
   axios
-    .post(
-      "https://fathomless-spire-96269.herokuapp.com/api/users/login",
-      userData
-    )
+    .post("http://localhost:5000/api/users/login", userData)
     .then((res) => {
       const { token } = res.data;
       localStorage.setItem("jereerBlogToken", token);

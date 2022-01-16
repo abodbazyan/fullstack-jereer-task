@@ -10,7 +10,7 @@ const posts = require("./routes/postsRouter");
 const app = express();
 app.use(
   cors({
-    origin: "https://fathomless-spire-96269.herokuapp.com",
+    origin: "*",
   })
 );
 app.use(express.json());
